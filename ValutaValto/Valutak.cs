@@ -12,7 +12,7 @@
 //
 //    var valuts = Valuts.FromJson(jsonString);
 
-namespace Valutak
+namespace ValutaValto
 {
 
     public partial class Valuts
@@ -35,12 +35,12 @@ namespace Valutak
 
     public partial class Valuts
     {
-        public static Valuts FromJson(string json) => JsonConvert.DeserializeObject<Valuts>(json, Valutak.Converter.Settings);
+        public static Valuts FromJson(string json) => JsonConvert.DeserializeObject<Valuts>(json, ValutaValto.Converter.Settings);
     }
 
     public static class Serialize
     {
-        public static string ToJson(this Valuts self) => JsonConvert.SerializeObject(self, Valutak.Converter.Settings);
+        public static string ToJson(this Valuts self) => JsonConvert.SerializeObject(self, ValutaValto.Converter.Settings);
     }
 
     internal static class Converter
