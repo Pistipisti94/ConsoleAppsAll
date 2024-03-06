@@ -23,50 +23,81 @@ namespace ValutaValto
 
         private static void Menu()
         {
-            Console.WriteLine("Üdvözöllek a Valutaváltóban \n\nKérlek válassz az alábbi lehetőségek közül:\n\n");
-            Console.WriteLine("1.Forint -> Euro \n2.USA Dollár -> Euro\n3.AED -> Euro\n4.BOB -> Euro");
+            Console.WriteLine("Üdvözöllek a Valutaváltóban \n\nKérlek válassz az alábbi lehetőségek közül, hogy milyen pénznemet szeretnél átváltani:\n\n");
+            Console.WriteLine("1.Forint \n2.USA Dollár \n3.AED \n4.BOB ");
 
-            string menu = Console.ReadLine();
-            string penz = "";
-            switch (menu)
+            string valasztas1 = Console.ReadLine();
+            string penz1 = "";
+           
+            switch (valasztas1)
             {
                 case "1":
-                    Console.WriteLine("HUF -> EURO");
-                    penz = "HUF";
+                    Console.WriteLine("HUF");
+                    penz1 = "HUF";
                     break;
                 case "2":
                     Console.WriteLine("USD -> EURO");
-                    penz = "USD";
+                    penz1 = "USD";
                     break;
                 case "3":
                     Console.WriteLine("AED -> EURO");
-                    penz = "AED";
+                    penz1 = "AED";
                     break;
                 case "4":
                     Console.WriteLine("BOB -> EURO");
-                    penz = "BOB";
+                    penz1 = "BOB";
                     break;
 
                 default:
                     Console.WriteLine("HUF -> EURO");
-                    penz = "HUF";
+                    penz1 = "HUF";
                     break;
             }
-            szamolas(penz);
+            Console.Clear();
+            Console.WriteLine("És most, hogy milyen pénznemre szeretnél átváltani:\n\n");
+            Console.WriteLine("1.Forint \n2.USA Dollár \n3.AED \n4.BOB ");
+            string valasztas2 = Console.ReadLine();
+            string penz2 = "";
+            switch (valasztas2)
+            {
+                case "1":
+                    Console.WriteLine("HUF");
+                    penz2 = "HUF";
+                    break;
+                case "2":
+                    Console.WriteLine("USD");
+                    penz2 = "USD";
+                    break;
+                case "3":
+                    Console.WriteLine("AED");
+                    penz2 = "AED";
+                    break;
+                case "4":
+                    Console.WriteLine("BOB");
+                    penz2 = "BOB";
+                    break;
+
+                default:
+                    Console.WriteLine("HUF");
+                    penz2 = "HUF";
+                    break;
+            }
+            szamolas(penz1,penz2);
         }
 
-        private static void szamolas(string penz)
+        private static void szamolas(string penz1,string penz2)
         {
-            List<Valuts> valutak = new List<Valuts>();
+            
 
 
-            Console.WriteLine("Írj be egy pénzösszeget amit szeretnél átváltani más pénznembe");
-
+            Console.WriteLine("Írj be egy összeget amit szeretnél átváltani a másik pénznembe");
+            
+            
             string penzosszeg = Console.ReadLine();
             try
             {
-                int numVal = Int32.Parse(penzosszeg);
-                Console.WriteLine($"{numVal} {penz} az {Math.Round(numVal / valutak[0].Rates[penz], 2)} EURO");
+                int numVal1 = Int32.Parse(penzosszeg);
+                Console.WriteLine($"{numVal1} {penz1} az {Math.Round((numVal1/valutak[0].Rates[penz1])*valutak[0].Rates[penz2], 2)} {penz2}");
             }
             catch (Exception ex)
             {
