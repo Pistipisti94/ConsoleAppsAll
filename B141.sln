@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Foiskolak", "Foiskolak\Fois
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValutaValto", "ValutaValto\ValutaValto.csproj", "{D88A2796-0646-4ED8-82B1-6671D2FA9C39}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Idojarasjelentes", "Idojarasjelentes\Idojarasjelentes.csproj", "{7756D6A3-8BD4-4238-97E3-25F0802400A9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +95,10 @@ Global
 		{D88A2796-0646-4ED8-82B1-6671D2FA9C39}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D88A2796-0646-4ED8-82B1-6671D2FA9C39}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D88A2796-0646-4ED8-82B1-6671D2FA9C39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7756D6A3-8BD4-4238-97E3-25F0802400A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7756D6A3-8BD4-4238-97E3-25F0802400A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7756D6A3-8BD4-4238-97E3-25F0802400A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7756D6A3-8BD4-4238-97E3-25F0802400A9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
