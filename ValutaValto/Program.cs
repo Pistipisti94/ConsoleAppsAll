@@ -1,13 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.ComponentModel.Design;
-using System.Linq;
 using System.Net.Http;
-using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
-using System.Xml;
 using ValutaValto;
 
 namespace ValutaValto
@@ -15,8 +9,10 @@ namespace ValutaValto
     internal class Program
     {
         static List<Valuts> valutak = new List<Valuts>();
+        
         static async Task Main(string[] args)
         {
+
             await valutaAdatok();
             Menu();
         }
@@ -32,24 +28,19 @@ namespace ValutaValto
             switch (valasztas1)
             {
                 case "1":
-                    Console.WriteLine("HUF");
                     penz1 = "HUF";
                     break;
                 case "2":
-                    Console.WriteLine("USD -> EURO");
                     penz1 = "USD";
                     break;
                 case "3":
-                    Console.WriteLine("AED -> EURO");
                     penz1 = "AED";
                     break;
                 case "4":
-                    Console.WriteLine("BOB -> EURO");
                     penz1 = "BOB";
                     break;
 
                 default:
-                    Console.WriteLine("HUF -> EURO");
                     penz1 = "HUF";
                     break;
             }
@@ -61,24 +52,19 @@ namespace ValutaValto
             switch (valasztas2)
             {
                 case "1":
-                    Console.WriteLine("HUF");
                     penz2 = "HUF";
                     break;
                 case "2":
-                    Console.WriteLine("USD");
                     penz2 = "USD";
                     break;
                 case "3":
-                    Console.WriteLine("AED");
                     penz2 = "AED";
                     break;
                 case "4":
-                    Console.WriteLine("BOB");
                     penz2 = "BOB";
                     break;
 
                 default:
-                    Console.WriteLine("HUF");
                     penz2 = "HUF";
                     break;
             }
