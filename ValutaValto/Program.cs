@@ -117,8 +117,6 @@ namespace ValutaValto
                 string jsonString = await responseMessage.Content.ReadAsStringAsync();
                 valutak.Add(Valuts.FromJson(jsonString));
             }
-
-            ;
         }
     }
 }
