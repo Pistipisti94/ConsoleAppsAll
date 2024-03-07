@@ -30,19 +30,19 @@ namespace ApiMenu
                 {
                     case 1:
                         Console.Clear();
-                        int a = DrinkMenu();
-                        await DrinkAdatok(a);                        
+                        DrinkMenu();
+                        await DrinkAdatok();                        
                         DrinkskiIras();
                         break;
                     case 2:
                         Console.Clear();
-                        int b = FoodMenu();
-                        await FoodAdatok(b);
+                        FoodMenu();
+                        await FoodAdatok();
                         FoodskiIras();
                         break;
                     case 3:
                         Console.Clear();
-                        //await DrinkAdatok();
+                        //await Valami();
                         break;
                     default:
                         break;
@@ -58,7 +58,7 @@ namespace ApiMenu
             Console.ReadKey();
         }
 
-        private static int DrinkMenu()
+        private static void DrinkMenu()
         {
             vissza:
             try
@@ -87,7 +87,7 @@ namespace ApiMenu
                     default:
                         break;
                 }
-                return a;
+                
             }
             catch (Exception)
             {
@@ -95,7 +95,7 @@ namespace ApiMenu
                 goto vissza;
             }
         }
-        private static int FoodMenu()
+        private static void FoodMenu()
         {
             vissza:
             try
@@ -123,7 +123,7 @@ namespace ApiMenu
                     default:
                         break;
                 }
-                return b;
+                
             }
             catch (Exception)
             {
@@ -206,7 +206,7 @@ namespace ApiMenu
         }
 
         #region Adatok
-        private static async Task DrinkAdatok(int a)
+        private static async Task DrinkAdatok()
         {
             HttpClient client = new HttpClient();
             HttpRequestMessage httpRequestMessage = new HttpRequestMessage();
@@ -217,7 +217,7 @@ namespace ApiMenu
                 drinks.Add(Drinks.FromJson(jsonString));
             }
         }
-        private static async Task FoodAdatok(int b)
+        private static async Task FoodAdatok()
         {
             HttpClient client = new HttpClient();
             HttpRequestMessage httpRequestMessage = new HttpRequestMessage();
