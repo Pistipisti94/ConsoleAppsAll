@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Drinks.cs" />
     <Compile Include="Foods.cs" />
+    <Compile Include="Games.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
