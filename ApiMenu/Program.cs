@@ -104,7 +104,7 @@ namespace ApiMenu
             vissza:
             try
             {
-                Console.WriteLine("Választható italok:\n1.Yaki Udon\n2.\n3.\n4.\n5.Véletlen étel");
+                Console.WriteLine("Választható italok:\n1.Yaki Udon\n2.Tarte Tatin\n3.Strawberry Rhubarb Pie\n4.Flamiche\n5.Véletlen étel");
                 int b;
                 b = int.Parse(Console.ReadLine());
                 switch (b)
@@ -113,13 +113,13 @@ namespace ApiMenu
                         etel = "search.php?s=Yaki%20Udon";
                         break;
                     case 2:
-                        etel = "";
+                        etel = "search.php?s=Tarte%20Tatin";
                         break;
                     case 3:
-                        etel = "";
+                        etel = "search.php?s=Strawberry%20Rhubarb%20Pie";
                         break;
                     case 4:
-                        etel = "";
+                        etel = "search.php?s=Flamiche";
                         break;
                     case 5:
                         etel = "random.php";
@@ -218,7 +218,7 @@ namespace ApiMenu
             {
                 foreach (var kvp in dictionary)
                 {
-                    if (kvp.Value != "" && kvp.Value != null)
+                    if (kvp.Value != "" && kvp.Value != null && kvp.Value != " ")
                     {
                         Console.WriteLine($"{kvp.Key.TrimStart('s','t','r')}: {kvp.Value}\n");
                     }
@@ -235,7 +235,7 @@ namespace ApiMenu
             {
                 Environment.Exit(0);
             }
-            else if(keyinfo.Key == ConsoleKey.Backspace)
+            else if(keyinfo.Key == ConsoleKey.Enter)
             {
                 Console.Clear();
                 Again();
@@ -253,7 +253,7 @@ namespace ApiMenu
 
 
 
-            Console.WriteLine($"Id: {games[0].Id}\nNév:  {games[0].Title}\nRövid leírás: {games[0].ShortDescription}\nLeírás:   {games[0].Description}\nMűfaj:   {games[0].Genre}\nMegjelenés:  {games[0].ReleaseDate}\nFejlesztő:  {games[0].Developer}\nMegosztó: {games[0].Publisher}\nPlatform: {games[0].Platform}");
+            Console.WriteLine($"Id: {games[0].Id}\n\nNév:  {games[0].Title}\n\nRövid leírás: {games[0].ShortDescription}\n\nLeírás:   {games[0].Description}\n\nMűfaj:   {games[0].Genre}\n\nMegjelenés:  {games[0].ReleaseDate}\n\nFejlesztő:  {games[0].Developer}\n\nMegosztó: {games[0].Publisher}\n\nPlatform: {games[0].Platform}");
                  Thread.Sleep(100);
                 
 
