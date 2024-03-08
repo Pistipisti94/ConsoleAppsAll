@@ -17,7 +17,7 @@ namespace ApiMenu
 {
     public partial class Foods
     {
-        [JsonProperty("foods", Required = Required.Always)]
+        [JsonProperty("meals", Required = Required.Always)]
         public Dictionary<string, string>[] Foodees { get; set; }
     }
 

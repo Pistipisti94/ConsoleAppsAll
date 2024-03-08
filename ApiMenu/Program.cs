@@ -100,13 +100,13 @@ namespace ApiMenu
             vissza:
             try
             {
-                Console.WriteLine("Választható italok:\n1.\n2.\n3.\n4.\n5.Véletlen étel");
+                Console.WriteLine("Választható italok:\n1.Yaki Udon\n2.\n3.\n4.\n5.Véletlen étel");
                 int b;
                 b = int.Parse(Console.ReadLine());
                 switch (b)
                 {
                     case 1:
-                        etel ="";
+                        etel = "search.php?s=Yaki%20Udon";
                         break;
                     case 2:
                         etel = "";
@@ -176,7 +176,7 @@ namespace ApiMenu
             {
                 foreach (var kvp in dictionary)
                 {
-                    if (kvp.Value != null)
+                    if (kvp.Value != "" && kvp.Value != null)
                     {
                         Console.WriteLine($"{kvp.Key.TrimStart('s','t','r')}: {kvp.Value}\n");
                     }
